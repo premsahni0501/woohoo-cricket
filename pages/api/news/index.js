@@ -1,4 +1,3 @@
-import request from 'request'
 import cheerio from 'cheerio'
 import axios from 'axios'
 
