@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "git push heroku main"
   },
   "peerDependencies": {
     "postcss": "8.1.7",
@@ -18,8 +19,7 @@
     "next": "10.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-icons": "^4.1.0",
-    "request": "^2.88.2"
+    "react-icons": "^4.1.0"
   },
   "devDependencies": {
     "autoprefixer": "10.0.2",

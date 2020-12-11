@@ -23,7 +23,6 @@ export default async (req, res) => {
   const {
     query
   } = req
-  console.log(query)
   const data = await getNews(1, true)
   res.json(data)
 }
