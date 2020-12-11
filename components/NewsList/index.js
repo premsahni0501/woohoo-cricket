@@ -8,7 +8,7 @@ const NewsList = ({ newsList }) => {
     <div className="row">
       {
         newsList.map((news, index) => (
-          <div className={`col col-12${news.featured ? '' : ' col-md-3'} mb-3`} key={'news_' + index} >
+          <div className={`col col-12${news.featured ? '' : ' col-md-4'} mb-3`} key={'news_' + index} >
             <NewsItem newsData={news} />
           </div>
         ))
