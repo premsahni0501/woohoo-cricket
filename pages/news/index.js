@@ -23,7 +23,7 @@ const Home = ({ newsList }) => {
 export default Home
 
 export const getStaticProps = async () => {
-  const res = await fetch(`${process.env.HOST + ':' + process.env.PORT}/api/news`)
+  const res = await fetch(`${process.env.HOST}/api/news`)
   const data = await res.json()
   return {
     props: {

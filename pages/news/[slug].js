@@ -21,7 +21,7 @@ const NewsDetails = ({ newsItem }) => {
 export default NewsDetails
 
 export const getServerSideProps = async ({ params }) => {
-  const res = await fetch(`${process.env.HOST + ':' + process.env.PORT}/api/news/${params.slug}`)
+  const res = await fetch(`${process.env.HOST}/api/news/${params.slug}`)
   const data = await res.json()
   return {
     props: {
