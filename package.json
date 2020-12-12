@@ -8,6 +8,9 @@
     "start": "next start",
     "deploy": "git push heroku main"
   },
+  "engines": {
+    "node": "14.x"
+  },
   "peerDependencies": {
     "postcss": "8.1.7",
     "tailwindcss": "^2.0.1"
