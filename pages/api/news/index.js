@@ -19,9 +19,7 @@ export const getNews = (page, loadmore) => {
   })
 }
 export default async (req, res) => {
-  const {
-    query
-  } = req
   const data = await getNews(1, true)
+  console.log(data)
   res.json(data)
 }

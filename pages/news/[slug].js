@@ -21,10 +21,10 @@ const NewsDetails = ({ newsItem }) => {
 export default NewsDetails
 
 export const getServerSideProps = async ({ params }) => {
-  const protocol = process.env.VERCEL_URL.includes('localhost') ? 'http://' : 'https://'
+  const protocol = process.env.HOST.includes('localhost') ? 'http://' : 'https://'
   let newsItem = {}
   try {
-    const res = await fetch(`${protocol}${process.env.VERCEL_URL}/api/news/${params.slug}`)
+    const res = await fetch(`${protocol}${process.env.HOST}/api/news/${params.slug}`)
     newsItem = await res.json()
   }
   catch (e) {
