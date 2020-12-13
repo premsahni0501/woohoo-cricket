@@ -21,11 +21,17 @@ const NewsDetails = ({ newsItem }) => {
 export default NewsDetails
 
 export const getServerSideProps = async ({ params }) => {
-  const res = await fetch(`${process.env.HOST}/api/news/${params.slug}`)
-  const data = await res.json()
+  let newsItem = {}
+  try {
+    const res = await fetch(`${process.env.HOST}/api/news/${params.slug}`)
+    newsItem = await res.json()
+  }
+  catch (e) {
+    console.log(e)
+  }
   return {
     props: {
-      newsItem: data || []
+      newsItem
     },
   }
 } 

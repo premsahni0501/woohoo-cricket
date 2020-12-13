@@ -23,11 +23,17 @@ const Home = ({ newsList }) => {
 export default Home
 
 export const getStaticProps = async () => {
-  const res = await fetch(`${process.env.HOST}/api/news`)
-  const data = await res.json()
+  let newsList = []
+  try {
+    const res = await fetch(`${process.env.HOST}/api/news`)
+    newsList = await res.json()
+  }
+  catch (e) {
+    console.log(e)
+  }
   return {
     props: {
-      newsList: data || []
+      newsList
     },
     revalidate: 60
   }
