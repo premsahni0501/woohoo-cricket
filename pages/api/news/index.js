@@ -6,6 +6,7 @@ export const getNews = (page, loadmore) => {
     const url = `https://cricket.yahoo.net/news/page/${page}?loadmore=${loadmore}&id=dab9f7bf-65a9-49cb-90b8-61c0b65ee0d8&extentities=`
     const res = await axios.get(url)
     const $ = cheerio.load(res.data)
+    console.log(res.data)
     const newsItems = []
     $('.article-item').each((index, el) => {
       const news_link = $(el).find('.article-thumbnail > a').attr('href').trim()
@@ -20,6 +21,5 @@ export const getNews = (page, loadmore) => {
 }
 export default async (req, res) => {
   const data = await getNews(1, true)
-  console.log(data)
   res.json(data)
 }
