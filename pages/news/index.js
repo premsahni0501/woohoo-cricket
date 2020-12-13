@@ -23,6 +23,7 @@ const Home = ({ newsList }) => {
 export default Home
 
 export const getStaticProps = async () => {
+  console.log(process.env.VERCEL_URL)
   let newsList = []
   try {
     const res = await fetch(`${process.env.VERCEL_URL}/api/news`)
