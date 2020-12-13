@@ -23,7 +23,8 @@ const Home = ({ newsList }) => {
 export default Home
 
 export const getStaticProps = async () => {
-  const res = await fetch(`${process.env.VERCEL_URL}/api/news`)
+  const protocol = process.env.VERCEL_URL.includes('localhost') ? 'http://' : 'https://'
+  const res = await fetch(`${protocol}${process.env.VERCEL_URL}/api/news`)
   const data = await res.json()
   return {
     props: {
