@@ -66,16 +66,26 @@ a {
 }
 .news-card {
   cursor: pointer;
-  &.featured {
-    flex-direction: row;
-    h6 {
-      font-size: 2rem;
+  @media screen and (min-width: 768px) {
+    &.featured {
+      flex-direction: row;
+      h6 {
+        font-size: 2rem;
+      }
+      .card-body {
+        max-width: 40%;
+      }
+      > img {
+        max-width: 60%;
+      }
     }
-    .card-body {
-      max-width: 40%;
-    }
-    > img {
-      max-width: 60%;
+  }
+  @media screen and (max-width: 767px) {
+    &.featured {
+      margin: 0 calc(-2rem - 6px);
+      border: 0;
+      border-bottom: 1px solid #ddd;
+      padding: 0 1rem;
     }
   }
 }
@@ -92,4 +102,10 @@ a {
 }
 .navbar-brand {
   cursor: pointer;
+}
+.navbar {
+  height: 6rem;
+}
+#__next {
+  overflow: hidden;
 }

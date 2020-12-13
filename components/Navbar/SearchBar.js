@@ -3,7 +3,7 @@ import Dropdown from '../Dropdown'
 
 const SearchBar = () => {
   return (
-    <div className="search-wrapper">
+    <div className="search-wrapper d-none">
       <div className="form-inline input-group">
         <span className="input-group-prepend">
           <button className="btn btn-light with-icon">

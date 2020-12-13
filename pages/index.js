@@ -12,7 +12,7 @@ const Home = ({ newsList }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="container">
+      <main className="container px-0">
         <NewsList newsList={newsList} />
       </main>
       <Footer />
