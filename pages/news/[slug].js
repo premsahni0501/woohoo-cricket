@@ -23,7 +23,7 @@ export default NewsDetails
 export const getServerSideProps = async ({ params }) => {
   let newsItem = {}
   try {
-    const res = await fetch(`${process.env.HOST}/api/news/${params.slug}`)
+    const res = await fetch(`${process.env.VERCEL_URL}/api/news/${params.slug}`)
     newsItem = await res.json()
   }
   catch (e) {

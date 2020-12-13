@@ -25,7 +25,7 @@ export default Home
 export const getStaticProps = async () => {
   let newsList = []
   try {
-    const res = await fetch(`${process.env.HOST}/api/news`)
+    const res = await fetch(`${process.env.VERCEL_URL}/api/news`)
     newsList = await res.json()
   }
   catch (e) {
