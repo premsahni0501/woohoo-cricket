@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import NewsItem from '../../components/NewsList/NewsItem'
+
 const NewsDetails = ({ newsItem }) => {
   return (
     <div className={"container-fluid news-details"}>

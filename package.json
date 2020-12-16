@@ -8,10 +8,6 @@
     "start": "next start",
     "deploy": "git push heroku main"
   },
-  "peerDependencies": {
-    "postcss": "8.1.7",
-    "tailwindcss": "^2.0.1"
-  },
   "dependencies": {
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
@@ -22,7 +18,8 @@
     "react-icons": "^4.1.0"
   },
   "devDependencies": {
-    "autoprefixer": "10.0.2",
+    "autoprefixer": "^10.1.0",
+    "postcss": "^8.2.1",
     "sass": "^1.30.0"
   }
 }
