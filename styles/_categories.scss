@@ -1,0 +1,9 @@
+.categories {
+  overflow-x: auto;
+  .nav {
+    flex-wrap: nowrap;
+    .btn {
+      white-space: nowrap;
+    }
+  }
+}

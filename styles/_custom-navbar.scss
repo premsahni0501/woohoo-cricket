@@ -1,0 +1,14 @@
+.custom-navbar {
+  background-color: var(--primary);
+  height: 4rem;
+  padding: 0;
+  .container {
+    display: flex;
+    align-items: center;
+    .navbar-brand {
+      cursor: pointer;
+      display: inline-flex;
+      filter: invert(1);
+    }
+  }
+}

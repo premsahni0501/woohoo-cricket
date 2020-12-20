@@ -1,5 +1,12 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "./loader";
+@import "./custom-navbar";
+@import "./login";
+@import "./search";
+@import "./slider";
+@import "./categories";
+@import "./custom-footer";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap");
 
 $sizes: 1, 2, 3, 4, 5, 6;
 
@@ -13,13 +20,12 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-    Helvetica Neue, sans-serif;
   font-weight: 300;
 }
 
 body {
-  padding-top: 6rem;
+  padding-top: 4rem;
+  font-family: "Raleway", sans-serif;
 }
 
 a {
@@ -62,7 +68,9 @@ a {
   }
 }
 .btn {
-  font-weight: 600;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 90%;
 }
 .news-card {
   cursor: pointer;
@@ -89,23 +97,17 @@ a {
     }
   }
 }
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 880px;
-  }
-}
 .news-details {
   font-size: 1.25rem;
   .card {
     cursor: auto;
   }
 }
-.navbar-brand {
-  cursor: pointer;
-}
-.navbar {
-  height: 6rem;
-}
 #__next {
   overflow: hidden;
+}
+.content-wrapper {
+  min-height: calc(100vh - 4rem);
+  position: relative;
+  background-color: var(--light);
 }

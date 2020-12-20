@@ -1,0 +1,27 @@
+.slider {
+  flex-wrap: nowrap;
+  .glider-contain {
+    width: calc(100% - 4rem);
+  }
+  .glider-next,
+  .glider-prev {
+    font-size: 2rem;
+  }
+  .nav-item {
+    margin: 0.25rem 0.5rem;
+    .slider-btn {
+      flex-direction: column;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      .item-label {
+        display: block;
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 75%;
+        white-space: nowrap;
+      }
+    }
+  }
+}

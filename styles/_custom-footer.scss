@@ -1,0 +1,11 @@
+.custom-footer {
+  position: sticky;
+  top: calc(100vh - 3rem);
+  margin: 0 -15px;
+  color: var(--light);
+  height: 3rem;
+  background-color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
