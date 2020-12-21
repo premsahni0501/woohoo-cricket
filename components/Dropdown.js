@@ -13,12 +13,12 @@ const Dropdown = ({ children, toggle, align, buttonText, iconComponent, toggleBt
     }
     document.body.addEventListener('click', hideDropdown)
     return () => document.body.removeEventListener('click', hideDropdown)
-  }, [])
+  }, [state, ref])
 
   return (
     <div className={`input-group-append dropdown ${className}`} ref={ref} {...props}>
-      <button className={`btn btn-light dropdown-toggle${iconComponent ? ' with-icon' : ''}${toggleBtnClass || ''}`} type="button"
-        onClick={() => setToggle(!state)}>
+      <button className={`btn btn-link text-white dropdown-toggle${iconComponent ? ' with-icon' : ''}${toggleBtnClass || ''}`} type="button"
+        onClick={() => setToggle(prev => !prev)}>
         {iconComponent}
         {buttonText}
         <FiChevronDown style={{

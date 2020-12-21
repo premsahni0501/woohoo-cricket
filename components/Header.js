@@ -17,17 +17,17 @@ const Header = ({ profile }) => {
         </Link>
         <SearchBar />
         <div className="d-flex align-items-center">
+          <Cart />
           {
             profile ? (
               <div className="d-inline-flex align-items-center">
                 <Notification />
-                <ProfileMenu />
+                <ProfileMenu profileData={profile} />
               </div>
             )
               :
               <Login />
           }
-          <Cart />
         </div>
       </div>
     </nav>

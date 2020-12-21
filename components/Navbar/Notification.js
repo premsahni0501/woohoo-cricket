@@ -5,7 +5,8 @@ import ListItem from '../ListItem'
 
 const Notification = () => {
   return (
-    <Dropdown iconComponent={<FiBell />}>
+    <Dropdown
+      className="ml-3" iconComponent={<FiBell />}>
       <List>
         <ListItem>List 1</ListItem>
       </List>

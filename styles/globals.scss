@@ -57,6 +57,10 @@ a {
   }
 }
 .dropdown-toggle {
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
   svg:last-child {
     margin-left: 0.25rem;
   }

@@ -3,6 +3,11 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Slider from "../components/Slider"
 
+const profile = {
+  email: 'premsahni0501@gmail.com',
+  name: 'Prem chand',
+  avatar: ''
+}
 const Home = () => {
   return (
     <div className="container-fluid content-wrapper">
@@ -11,7 +16,7 @@ const Home = () => {
           <title>e-Store</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Header />
+        <Header profile={profile} />
         <main className="container px-0 py-3 bg-white">
           <Slider />
         </main>
