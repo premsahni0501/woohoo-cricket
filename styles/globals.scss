@@ -7,6 +7,7 @@
 @import "./categories";
 @import "./custom-footer";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 
 $sizes: 1, 2, 3, 4, 5, 6;
 
@@ -114,4 +115,14 @@ a {
   min-height: calc(100vh - 4rem);
   position: relative;
   background-color: var(--light);
+}
+.tui-image-editor-container .color-picker-control .tui-colorpicker-palette-container ul {
+  white-space: normal;
+  .tui-colorpicker-palette-button {
+    min-width: 1rem;
+    min-height: 1rem;
+  }
+}
+.tui-image-editor-header-logo {
+  display: none;
 }
